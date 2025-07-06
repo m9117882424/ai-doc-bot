@@ -1,43 +1,52 @@
-# AI Document Parser Bot
+# AI Document Processing Telegram Bot 🤖📄
 
-Telegram-бот, который:
+A powerful Telegram bot built with Python that automates document handling:
+- 🧾 Extracts text from scanned PDFs or images using OCR (Tesseract)
+- 🧠 Identifies document type (invoice, bill, contract, etc.) using GPT
+- 📊 Parses key fields (date, ID, total, etc.) into structured format
+- 📥 Supports multiple file uploads per session
+- 📤 Exports results to Excel (CSV or Google Sheets-ready)
 
-- принимает PDF или фото документов
-- делает OCR
-- определяет тип документа (Путевой лист, Счёт, Квитанция)
-- извлекает ключевые данные с помощью GPT
-- сохраняет в Excel или Google Sheets
-- поддерживает множественную загрузку и команду /finish
+## 🛠 Tech Stack
+- Python 3.11+
+- aiogram (Telegram bot)
+- Tesseract OCR
+- GPT (OpenAI API or DeepSeek)
+- Pandas + OpenPyXL
+- FastAPI / Flask (optional API backend)
 
-## Возможности
+## ✅ Features
+- Auto-classify document type
+- Multi-language OCR (English, Turkish, Russian)
+- Export to Excel
+- Stateless or session-based processing
+- Works with Telegram polling or webhook mode
 
-- 📄 Поддержка PDF, PNG, JPG
-- 🔍 Автоматический OCR (русский + турецкий + английский)
-- 🤖 AI-парсинг через GPT по шаблонам
-- 📊 Экспорт в Excel (один файл на все документы)
-- 🤝 Поддержка нескольких документов за сессию
+## 📦 Example Use Cases
+- Logistics and shipping waybills
+- Utility bills and receipts
+- Contracts and reports
+- Field data digitization
 
-## Команды
+## 🚀 Demo
+Ask the bot to:
+1. Upload 1 or more scanned files
+2. Type `/finish` to receive structured results in Excel
+3. Optionally: deploy to your server with webhook support
 
-- Загрузка документов — просто отправьте их боту
-- `/finish` — завершить сессию и получить итоговый файл
-
-## Установка
-
-```bash
-pip install -r requirements.txt
+## 📁 Repo Structure
+```
+ai_doc_bot/
+├── bot.py                  # Entry point
+├── handlers/               # Telegram logic
+├── prompts/                # GPT templates
+├── ocr_utils.py            # OCR logic
+├── gpt_parser.py           # AI parsing
+├── document_types.py       # Type → prompt map
+└── requirements.txt
 ```
 
-Создайте `.env` файл:
+## 🧑‍💻 Author
+Built by a Python developer specializing in automation, AI, and Telegram bot solutions.
 
-```
-BOT_TOKEN=ваш_telegram_token
-OPENAI_API_KEY=ваш_openai_key
-TG_API_URL=https://api.telegram.org
-```
-
-## Запуск
-
-```bash
-python bot.py
-```
+Feel free to fork, clone, or contact me for freelance work.
