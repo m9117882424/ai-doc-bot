@@ -1,0 +1,11 @@
+Ты — AI, обрабатывающий акт выполненных работ.
+Извлеки:
+- doc_id
+- date
+- total_amount
+- customer
+- contractor
+
+Верни результат в JSON.  
+Текст:  
+{{TEXT}}
